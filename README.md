@@ -1,4 +1,4 @@
-# Simple AI Tech News Newsletter Automation
+# AI Tech News Newsletter Automation
 
 ![workflow](workflow.jpeg)
 
@@ -6,7 +6,7 @@ This tool auto-grabs daily tech news, summarizes it with AI, and emails it to yo
 
 ## Quick Overview
 1. **Fetch news** from tech sites (e.g., TechCrunch, The Verge).
-2. **Clean & limit** to top 2 articles.
+2. **Clean** to top articles.
 3. **AI summarize** into short, fun reads.
 4. **Email it** daily to your list.
 
@@ -15,16 +15,13 @@ This tool auto-grabs daily tech news, summarizes it with AI, and emails it to yo
 - **RSS Feeds**: List like `https://techcrunch.com/feed, https://www.theverge.com/rss`.
 - **Parse Feeds**: Pull title, link, description, date.
 - **Clean Data**: Fix formats.
-- **Limit**: Pick newest 2 per feed.
 - **AI Magic**: llama3.2 model makes quick summaries + highlights.
 - **Send Email**: Via Gmail to subscribers (e.g., `team@example.com`).
 
 ## Sample Email
 **Daily Tech Digest**  
-- **Title 1**: [Link]  
-  AI summary: Short para on the story.  
-- **Title 2**: [Link]  
-  AI summary: Another quick take.
+- **Sample mail**:[Gmail - Daily Tech Newsletter](Gmail-DailyTechNewsletter.pdf)
+   
 
 ## Setup Basics
 | What | Info | Example |
@@ -34,7 +31,6 @@ This tool auto-grabs daily tech news, summarizes it with AI, and emails it to yo
 | Emails | Who gets it | `you@example.com` |
 
 ## Tips
-- Change "Limit" for more/fewer stories.
 - Add Gmail keys for sending.
 - Swap AI to GPT if you want.
 
