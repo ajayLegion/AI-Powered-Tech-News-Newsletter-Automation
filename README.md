@@ -1,111 +1,53 @@
-# 📰 AI-Powered Tech News Newsletter Automation
+# Simple AI Tech News Newsletter Automation
+
 ![workflow](workflow.jpeg)
 
-This workflow automatically collects, summarizes, and sends a curated daily tech news newsletter using AI.  
-It integrates RSS feeds, an AI summarization agent, and automated email delivery.
+This tool auto-grabs daily tech news, summarizes it with AI, and emails it to you. Uses RSS feeds, AI, and Gmail.
 
----
+## Quick Overview
+1. **Fetch news** from tech sites (e.g., TechCrunch, The Verge).
+2. **Clean & limit** to top 2 articles.
+3. **AI summarize** into short, fun reads.
+4. **Email it** daily to your list.
 
-## 🚀 Overview
+## How It Works (Step-by-Step)
+- **Daily Trigger**: Runs every 24 hours.
+- **RSS Feeds**: List like `https://techcrunch.com/feed, https://www.theverge.com/rss`.
+- **Parse Feeds**: Pull title, link, description, date.
+- **Clean Data**: Fix formats.
+- **Limit**: Pick newest 2 per feed.
+- **AI Magic**: llama3.2 model makes quick summaries + highlights.
+- **Send Email**: Via Gmail to subscribers (e.g., `team@example.com`).
 
-The workflow automates the following process:
-1. Fetch daily tech news articles from RSS feeds.
-2. Normalize and filter the data.
-3. Use an AI model to generate concise summaries.
-4. Email the generated newsletter to subscribers.
+## Sample Email
+**Daily Tech Digest**  
+- **Title 1**: [Link]  
+  AI summary: Short para on the story.  
+- **Title 2**: [Link]  
+  AI summary: Another quick take.
 
----
+## Setup Basics
+| What | Info | Example |
+|------|------|---------|
+| RSS List | Comma-separated URLs | `https://techcrunch.com/feed, https://www.theverge.com/rss` |
+| Schedule | When to run | Daily at 8 AM |
+| Emails | Who gets it | `you@example.com` |
 
-## 🧩 Workflow Structure
+## Tips
+- Change "Limit" for more/fewer stories.
+- Add Gmail keys for sending.
+- Swap AI to GPT if you want.
 
-### 1. **Get Articles Daily**
-A scheduled trigger that runs once per day to start the pipeline.
+## Why Use It?
+- Hands-free news curation.
+- Short & clear updates.
+- No spam, just essentials.
 
-### 2. **Set Tech News RSS Feeds**
-Defines a list of RSS feeds for tech-related news sources (e.g., TechCrunch, The Verge, Wired).
+## Tools
+- **Automation**: n8n-like workflow.
+- **News**: RSS.
+- **AI**: llama3.2.
+- **Email**: Gmail.
 
-### 3. **Split Out**
-Splits the list of feeds into individual items for separate processing.
-
-### 4. **Read RSS News Feeds**
-Parses each RSS feed to extract article metadata such as:
-- Title  
-- URL  
-- Description  
-- Publication date  
-
-### 5. **Set and Normalize Fields**
-Cleans and normalizes the extracted data to ensure consistent formatting.
-
-### 6. **Limit**
-Restricts the number of articles to a manageable amount (e.g., top 2 latest articles).
-
-### 7. **AI NEWS Agent**
-Uses the `llama3.2 Chat Model` to summarize and generate readable newsletter content:
-- Summarizes articles into concise paragraphs.
-- Adds AI-generated commentary or highlights.
-
-### 8. **Send Newsletter**
-Automatically sends the generated content via Gmail to a mailing list of subscribers.
-
----
-
-## 🧠 AI Model
-
-- **Model Used:** llama3.2 Chat Model  
-- **Purpose:** Generate short, engaging summaries and commentary from fetched articles.
-
----
-
-## 📬 Output
-
-Subscribers receive an email newsletter containing:
-- Article titles
-- AI-generated summaries
-- Links to the original articles
-
-Example email structure:
-
----
-
-## ⚙️ Configuration
-
-| Variable | Description | Example |
-|-----------|-------------|----------|
-| RSS_FEEDS | Comma-separated list of RSS URLs | `https://techcrunch.com/feed, https://www.theverge.com/rss` |
-| DAILY_TRIGGER | Cron or scheduler config | Every 24 hours |
-| EMAIL_RECIPIENTS | Target email addresses | `team@example.com` |
-
----
-
-## 🧾 Notes
-
-- You can adjust the **Limit** node to include more or fewer articles per newsletter.  
-- Ensure Gmail API or SMTP credentials are properly configured in the **Send Newsletter** step.  
-- The **AI NEWS Agent** can be replaced with other LLMs if needed (e.g., GPT-based models).
-
----
-
-## 📈 Benefits
-
-- Fully automated daily tech news summary.
-- Saves manual effort in curation.
-- Keeps readers updated with minimal noise and maximum clarity.
-
----
-
-## 🧰 Tech Stack
-
-- **Automation Tool:** Custom Workflow Engine / n8n-style Automation  
-- **Data Source:** RSS Feeds  
-- **AI Engine:** llama3.2 Chat Model  
-- **Delivery:** Gmail Integration
-
----
-
-## 👤 Author
-
-**Created by:** _Legion_  
-**Purpose:** Automate daily tech news curation using AI summarization.
-
----
+**By:** Legion  
+**Goal:** Easy daily AI tech news.
