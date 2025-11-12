@@ -1,4 +1,5 @@
 # 📰 AI-Powered Tech News Newsletter Automation
+![workflow](workflow.jpeg)
 
 This workflow automatically collects, summarizes, and sends a curated daily tech news newsletter using AI.  
 It integrates RSS feeds, an AI summarization agent, and automated email delivery.
